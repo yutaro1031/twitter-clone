@@ -2,29 +2,28 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
-import { Timeline } from '../types';
+import { Timeline as TimelineType } from '../types';
+import { getTweets } from '../modules/timeline';
 
-interface Props {}
-interface State {
-  timeline: Timeline;
+interface Props {
+  getTweets: typeof getTweets;
+  // tweets: TimelineType;
 }
 
-class Header extends React.Component<Props, State> {
-  componentDidMount() {
-    axios
-      .get<Timeline>('https://demo6801336.mockable.io/timeline')
-      .then(res => this.setState({ timeline: res.data }))
-      .catch(err => console.log(err));
-  }
+const Timeline: React.FC<Props> = ({ getTweets }) => {
+  // componentDidMount() {
+  //   axios
+  //     .get<TimelineType>('https://demo6801336.mockable.io/timeline')
+  //     .then(res => this.setState({ timeline: res.data }))
+  //     .catch(err => console.log(err));
+  // }
 
-  render() {
-    return (
-      <div>
-        hgoehgoehg
-        <div>hoge</div>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      hgoehgoehg
+      <div>hoge</div>
+    </div>
+  );
+};
 
-export default Header;
+export default Timeline;
