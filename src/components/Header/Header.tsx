@@ -37,4 +37,4 @@ const Image = styled.img`
   border-radius: 50%;
 `;
 
-export default Header;
+export { Header };

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 
-import Timeline from '../components/Timeline';
+import { Timeline } from '../components/Timeline';
 import { getTweets } from '../modules/timeline';
 import { RootState } from '../modules';
 

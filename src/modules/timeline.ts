@@ -1,6 +1,6 @@
 import { Action } from 'redux';
 
-import { Timeline as State } from '../types';
+import { Timeline as State } from '../Types/types';
 
 const GET_TWEETS = 'GETTWEETS';
 

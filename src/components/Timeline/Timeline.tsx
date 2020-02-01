@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
-import { Timeline as TimelineType } from '../types';
-import { getTweets } from '../modules/timeline';
+import { Timeline as TimelineType } from '../../Types/types';
+import { getTweets } from '../../modules/timeline';
 
 interface Props {
   getTweets: typeof getTweets;
@@ -26,4 +26,4 @@ const Timeline: React.FC<Props> = ({ getTweets }) => {
   );
 };
 
-export default Timeline;
+export { Timeline };
