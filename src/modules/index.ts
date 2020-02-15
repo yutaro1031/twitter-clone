@@ -1,4 +1,6 @@
-import { combineReducers, createStore } from 'redux';
+import { combineReducers, createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+
 import { timelineReducer } from './timeline';
 
 export const createRootReducer = () =>
@@ -8,6 +10,6 @@ export const createRootReducer = () =>
 
 const reducers = createRootReducer();
 
-export const store = createStore(reducers);
+export const store = createStore(reducers, applyMiddleware(thunk));
 
 export type RootState = ReturnType<ReturnType<typeof createRootReducer>>;
